@@ -1,0 +1,25 @@
+name: Daily Todo Bumper
+on:
+  schedule:
+    - cron: '0 5 * * *'  # 12AM EST / 1AM EDT
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Notion Task Updater
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
+        run: node index.js

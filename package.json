@@ -1,18 +1,15 @@
 {
   "name": "notion-todo-bumper",
   "version": "1.0.0",
-  "description": "",
+  "description": "If due date has passed, bump unfinished Notion To-Dos to current date",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Halsey Quinn",
   "license": "ISC",
   "dependencies": {
     "@notionhq/client": "^3.1.3",
     "dotenv": "^16.5.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.15.30"
   }
 }
