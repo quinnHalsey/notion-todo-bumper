@@ -1,8 +1,7 @@
 name: Daily Todo Bumper
 on:
   schedule:
-    - cron: '* * * * *'  # TEST EVERY MINUTE
-    # - cron: '0 5 * * *'  # 12AM EST / 1AM EDT
+    - cron: '0 5 * * *'  # 12AM EST / 1AM EDT
 jobs:
   run-task:
     runs-on: ubuntu-latest
