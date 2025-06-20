@@ -1,8 +1,9 @@
 name: Daily Todo Bumper
 on:
   schedule:
-    # - cron: '0 5 * * *'  # 12AM EST / 1AM EDT
     - cron: '* * * * *'  # TEST EVERY MINUTE
+    # - cron: '0 5 * * *'  # 12AM EST / 1AM EDT
+jobs:
   run-task:
     runs-on: ubuntu-latest
 
@@ -23,3 +24,4 @@ on:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DATABASE_ID: ${{ secrets.DATABASE_ID }}
         run: node index.js
+
